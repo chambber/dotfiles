@@ -1,0 +1,24 @@
+[user]
+	 name = Rubens Nascimento
+	 email = iorubenspn@gmail.com
+
+[init]
+	 defaultBranch = main
+
+[includeIf "gitdir:~/develop/wsac/"]
+	 path = ~/develop/wsac/.gitconfig-wsac
+
+[includeIf "gitdir:~/develop/infra/"]
+	 path = ~/develop/infra/.gitconfig-infra
+
+[includeIf "gitdir:~/develop/selcorp/"]
+	 path = ~/develop/selcorp/.gitconfig-selcorp
+
+[includeIf "gitdir:~/develop/maitha/"]
+  path = ~/develop/maitha/.gitconfig-maitha
+
+[alias]
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+  publish = "!git push -u origin $(git branch-name)"
+  unstage = reset HEAD
+  diffc = diff --cached
