@@ -103,4 +103,4 @@ alias ohmyzsh="v ~/.oh-my-zsh"
 alias gc="git branch --merged | egrep -v '(^\*|master|main|dev|develop|staging)' | xargs git branch -d"
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.local/bin:$PATH"
